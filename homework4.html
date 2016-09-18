@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a{
+            color:blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        var num = 1;
+        function addFile() {
+            var obj = document.getElementById('file1');
+            var newNode = obj.cloneNode(true);
+            newNode.id = 'file'+(++num);
+            obj.parentNode.appendChild(newNode);
+        }
+        function delFile(obj) {
+            if(obj.parentNode.id!=='file1')
+                obj.parentNode.parentNode.removeChild(obj.parentNode);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="+" onclick="addFile()">
+    <div>
+        <div id="file1">
+            <input type="file"><a onclick="javascript:delFile(this)">删除</a>
+        </div>
+    </div>
+</body>
+</html>

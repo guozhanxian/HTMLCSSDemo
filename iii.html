@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var str = window.location.host + "<<<"+window.location.hostname+"<<<"+window.location.href;
+        console.log(str);
+        
+        function hello() {
+            window.location.href = "http://www.baidu.com";
+        }
+        
+        function hello2() {
+            for(var m in window.navigator)
+            {
+                alert(m + "<<<" + window.navigator[m]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input value="去百度" type="button" onclick="hello()">
+    <input value="查看浏览器信息" type="button" onclick="hello2()">
+</body>
+</html>

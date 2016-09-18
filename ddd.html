@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        Array.prototype.hello = function(){
+            alert("Hello World");
+        };
+        var x = [{id:5,name:'zhangsaj',age:22},{id:3,name:'lisi',age:20},{id:1,name:'wangwu',age:21}];
+        if(x instanceof Array)
+        {
+            alert("X变量是数组！");
+            x.hello();
+        }
+        sortArr(x,function(a,b) {
+            if(a.age>b.age){
+                return 1;
+            }else if(a.age === b.age){
+                return 0;
+            }else{
+                return -1;
+            }
+        });
+
+        for(var i=0;i<x.length;i++)
+        {
+            console.log(x[i].id+"<<<"+x[i].name+"<<<"+x[i].age);
+        }
+
+        function sortArr(arr,f)
+        {
+            for(var i=0;i<arr.length;i++)
+            {
+                for(var j=0;j<i;j++)
+                {
+                    if(f(arr[i],arr[j])<=-1)
+                    {
+                        var temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+        }
+
+        function sss() {
+            var m = 555;
+            function qqq(){
+                m += 9;
+            }
+            qqq();
+            console.log(m);
+        }
+        sss();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

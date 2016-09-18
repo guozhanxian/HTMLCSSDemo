@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .abc{
+            color: red;
+        }
+        .bbb{
+            background-color: green;
+            height: 300px;
+            width: 300px;
+        }
+        .ccc{
+            position: absolute;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+        }
+    </style>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script>
+        function hello() {
+            $('#aaa').toggleClass('abc');
+            $('#bbb').append('<p>你好，世界！</p>');
+            $('<p>你好，世界！</p>').prependTo('#bbb');
+            $('.ccc').animate({
+                left:900,
+                opacity:.3
+            },2000,function(){
+
+            });
+        }
+        $(document).ready(function(){
+
+        });
+        $().ready(function(){
+
+        });
+        $(function(){
+
+        });
+    </script>
+</head>
+<body>
+    <input id="aaa" type="button" onclick="hello()" value="这是一个按钮！">
+    <div id="bbb"><p>Hello World</p></div>
+    <div class="bbb"></div>
+    <div class="ccc"></div>
+</body>
+</html>

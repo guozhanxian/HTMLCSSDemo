@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var x = new Object();
+        x.id = 1;
+        x.name = "zhang3";
+        x.age = 23;
+
+        //对象的常量表示
+        var y = {
+            id:2,
+            name:'李四',
+            age:30,
+            teacher:{
+                name:'王五',
+                age:55,
+                sex:'女'
+            }
+        };
+        y["sex"] = "男";
+        delete y.age;
+        alert(y.teacher.name);
+        alert(y["teacher"]["name"]);
+        alert(y["teacher"].age);
+        alert(y.age);
+
+        function add(a,b)
+        {
+            return a + b;
+        }
+        alert(add(3,5));//8
+        alert(add("3",5));//undefined   "35"
+        alert(add(3));//3  NaN
+        alert(add("3"));//3  "3"   null   "3undefined"
+        alert(add(3,5,7));//undefined  8
+        alert(add());//undefined   空白  NaN
+
+        function Student(id,name,age)
+        {
+            var x = {
+                id:id,
+                name:name,
+                age:age
+            };
+            return x;
+        }
+        var z = new Student(3,"赵六",28);
+        alert(z.name);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

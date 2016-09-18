@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function walkDom(node,f) {
+            f(node);
+            node = node.firstChild;
+            while(node)
+            {
+                walkDom(node,f);
+                node = node.nextSibling;
+            }
+        }
+        function getElementsByClassName(className) {
+            var results = [];
+            walkDom(document.body, function (node) {
+                var a, c = node.className, i;
+                if (c) {
+                    a = c.split(' ');
+                    for (i = 0; i < a.length; i += 1) {
+                        if (a[i] === className) {
+                            results.push(node);
+                            break;
+                        }
+                    }
+                }
+            });
+            return results;
+        }
+
+        window.onload = function(){
+            var arr = getElementsByClassName('fff');
+            for(var i=0;i<arr.length;i++)
+            {
+                alert(arr[i].id);
+            }
+        };
+    </script>
+</head>
+<body id="hello">
+    <h1 id="aaa" class="aaa fff">Hello World</h1>
+    <input id="bbb" type="text">
+    <ul id="ccc"><li id="ddd" class="fff">aaaa</li><li id="eee">bbbb</li><li id="fff" class="fff">cccc</li></ul>
+</body>
+</html>

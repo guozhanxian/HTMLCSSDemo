@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function(){
+            window.setInterval(function(){
+                var now = new Date();
+                var holi = new Date(2016,9,1,0,0,0,0);
+                var res = holi.getTime()-now.getTime();
+                if(res>=0){
+                    var day = parseInt(res/(1000*60*60*24));
+                    var hours = parseInt((res/(1000*60*60*24)-day)*24);
+                    var minutes = ~~(((res/(1000*60*60*24)-day)*24-hours)*60);
+                    var seconds = parseInt((((res/(1000*60*60*24)-day)*24-hours)*60-minutes)*60);
+
+                    var str = "<h1>距离2016-10-01日过节还有"+day+"天，"+hours+"小时，"+minutes+"分钟，"+seconds+"秒！</h1>";
+                    //document.write(str);
+                    document.getElementById('hello').innerHTML = str;
+                }else{
+                    //时间超过提示
+                }
+            },1000);
+        };
+    </script>
+</head>
+<body>
+    <div id="hello"></div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8"/>
+    <title>HTML5课程学习</title>
+    <style>
+        .btn{
+            width: 80px;
+            height: 50px;
+            color: white;
+            font-weight: bold;
+            padding-left: 20px;
+            padding-top: 18px;
+            background-color: #419641;
+            cursor: pointer;
+            border-radius:10px;
+        }
+        p{
+            border:1px solid green;
+            border-radius:12px;
+        }
+    </style>
+    <script>
+        function hello(){
+            alert('Hello');
+            document.forms[1].submit();
+        }
+    </script>
+</head>
+<body>
+<!--这是一个注释信息-->
+<h1>Hello <i>World</i></h1>
+<p>
+    Trident(IE内核)：该内核程序在1997年的IE4中首次被采用，是微软在Mosaic代码的基础之上修改而来的，并沿用到IE11，也被普遍称作”IE内核”。Trident实际上是一款开放的内核，其接口内核设计的相当成熟，因此才有许多采用IE内核而非IE的浏览器(壳浏览器)涌现。</p>
+<p>由于IE本身的“垄断性”（虽然名义上IE并非垄断，但实际上，特别是从Windows
+    95年代一直到XP初期，就市场占有率来说IE的确借助Windows的东风处于“垄断”的地位）而使得Trident内核的长期一家独大，<br>微软很长时间都并没有更新Trident内核，这导致了两个后果——一是Trident内核曾经几乎与W3C标准脱节（2005年），二是Trident内核的大量
+    Bug等安全性问题没有得到及时解决，然后加上一些致力于开源的开发者和一些学者们公开自己认为IE浏览器不安全的观点，也有很多用户转向了其他浏览器，Firefox和Opera就是这个时候兴起的。非Trident内核浏览器的市场占有率大幅提高也致使许多网页开发人员开始注意网页标准和非IE浏览器的浏览效果问题。</p>
+<h1 align="right">中软国际</h1>
+<h2>中软国际</h2>
+<h3>中软国际</h3>
+<h4>中软国际</h4>
+<h5>中软国际</h5>
+<h6>中软国际</h6>
+<pre>public class Hello{
+         public static void main(String[] args)
+         {
+              System.out.println("Hello World!");
+         }
+    }</pre>
+
+<ul type="circle">
+    <li>苹果</li>
+    <ol>
+        <li>苹果汁</li>
+        <li>苹果泥</li>
+        <li>苹果醋</li>
+    </ol>
+    <li>橘子</li>
+    <li>香蕉</li>
+</ul>
+<a name="page_top"></a>
+<dl>
+    <dt><h3>鸡蛋</h3></dt>
+    <dd>母鸡生出来的受精卵！</dd>
+    <dt>鸭蛋</dt>
+    <dd>母鸭生出来的受精卵！</dd>
+</dl>
+<img src="imgs/responsive-nav.js.png" />
+<img src="imgs/responsive-nav.js.png" />
+<img src="imgs/responsive-nav.js.png" />
+<a href="mailto:guozhanxian@126.com">给蝈蝈发送电子邮件</a>
+<a href="http://www.baidu.com" target="_blank">去百度</a>
+<a href="imgs/codeguide.png">连接到图片</a>
+<a href="#">空连接</a>
+<script>
+    for(var i=0;i<100;i++)
+    {
+        document.write("<p>"+i+"</p>");
+    }
+</script>
+<a href="#page_top">回到顶部</a>
+<table border="1" width="30%" cellpadding="15" cellspacing="0">
+    <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+    </tr>
+    <tr>
+        <td rowspan="" colspan="">1</td>
+        <td>张三</td>
+        <td>23</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>张三</td>
+        <td>23</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>张三</td>
+        <td>23</td>
+    </tr>
+</table>
+<div style="border:1px solid red;width:200px;height: 200px">头</div>
+<div style="border:1px solid red">中间左</div>
+<div style="border:1px solid red">中间右</div>
+<form action="aaa.html">
+    <input type="text" name="userName" placeholder="用户姓名">
+    <input type="text" name="userAge">
+    <textarea cols="40" rows="5">Hello World</textarea><br>
+    <input type="radio" name="sex" value="男" checked="checked">先生<input type="radio" name="sex" value="女">女士
+    <input type="submit">
+</form>
+<form action="aaa.html" method="post" enctype="multipart/form-data">
+    <input type="file" name="myFile"><br>
+    <select name="jishu">
+        <optgroup label="编程语言">
+            <option value="java">Java</option>
+            <option value="cplusplus">C++</option>
+            <option value="python">Python</option>
+        </optgroup>
+        <optgroup label="数据库">
+            <option value="oracle">Oracle</option>
+            <option value="db2">DB2</option>
+        </optgroup>
+    </select>
+    <br>
+    <input type="text" list="lang" name="tech">
+    <datalist id="lang">
+        <option value="Java" label="Java语言" />
+        <option value="C" label="C语言" />
+        <option value="JavaScript" label="JavaScript语言" />
+        <option value="Python" label="Python语言" />
+    </datalist>
+    <input type="range" min="1" max="10" step="1" value="1">
+    <input type="color">
+    <input type="email">
+    <input type="date"><br>
+    <meter min="1" max="10" value="6" low="3" high="7" style="width: 200px"></meter>
+    <progress min="1" max="100" value="50" style="width: 200px"></progress>
+    <div class="btn" onclick="hello()">确  定</div>
+    <input type="submit">
+</form>
+<br>
+<br>
+<p>&lt; &gt;</p>
+<input type="text" value="Hello&quot;&amp;&copy;" />
+<iframe src="bbb.html" width="20%"></iframe>
+<iframe width="100%" height="600px" frameborder="0" scrolling="auto" src="bbb.html" name="first"></iframe>
+<video src="demo.mp4" width="450" height="300" controls></video>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        String.prototype.supplant = function (o) {
+            return this.replace(/{([^{}]*)}/g,
+                    function (a, b) {
+                        alert(a+"<<<<"+b);
+                        var r = o[b];
+                        return typeof r === 'string' ?
+                                r : a;
+                    }
+            );
+        };
+        function hello(e) {
+            e = e || event;
+            var target = e.target || e.srcElement;
+            target.style.fontSize = '5em';
+            target.style.color = 'green';
+        }
+        function aaa(e) {
+            e = e || event;
+            e.cancelBubble = true;
+            if(e.stopPropagation)
+            {
+                e.stopPropagation();
+            }
+            var x = window.prompt('你叫啥？');
+        }
+        function bbb() {
+            var str = "<h1>{name}</h1><h2>{age}</h2>";
+            var obj = {name:'zhangsan',age:'22'};
+            var res = str.supplant(obj);
+            alert(res);
+        }
+        bbb();
+    </script>
+</head>
+<body>
+    <input type="button" value="One" id="one" onclick="hello(event)">
+    <input type="button" value="Two" id="two" onclick="hello(event)">
+    <input type="button" value="Three" id="three" onclick="hello(event)">
+
+    <div onclick="">
+        <div onclick="bbb()">
+            <div onclick="aaa()">
+                <div onclick="">
+                    hello
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

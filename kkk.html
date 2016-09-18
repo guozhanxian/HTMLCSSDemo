@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .aaa{
+            border:3px solid red;
+        }
+        .bbb{
+            border:5px dotted green;
+        }
+    </style>
+    <script>
+        function changeStyle() {
+            var obj = document.getElementById('abc');
+            if(obj.className=='aaa')
+            {
+                obj.className = 'bbb';
+            }else {
+                obj.className = 'aaa';
+                obj.style.borderRadius = '5px';
+            }
+        }
+        function addContent() {
+            document.getElementById('bcd').innerHTML = '<h1 id="qqq">Hello</h1><h2>World</h2>';
+            document.getElementById('qqq');
+        }
+        window.onload = function () {
+//            document.getElementById('oneBtn')["onclick"] = function(){
+//                var obj = document.getElementById('abc');
+//                obj.setAttribute("src","imgs/iTunes ogg.png");
+//            };
+            document.getElementById('oneBtn').addEventListener('click',function(){
+                var obj = document.getElementById('abc');
+               obj.setAttribute("src","imgs/iTunes ogg.png");
+          },false);
+        };
+    </script>
+</head>
+<body>
+    <img id="abc" src="imgs/lesscss.png" class="aaa">
+    <input type="button" value="Change" id="oneBtn">
+    <input type="button" value="ChangeStyle" onclick="changeStyle()">
+    <div id="bcd" style="border: 2px solid red"></div>
+    <input type="button" value="Add Content" onclick="addContent()">
+</body>
+</html>

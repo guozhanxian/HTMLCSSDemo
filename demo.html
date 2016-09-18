@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title>rotation_CSS参考手册_web前端开发参考手册系列</title>
+    <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+    <style>
+        .test{
+            width:100px;
+            padding:10px;
+            border:5px solid #aaa;
+            -webkit-rotation:45deg;
+            -moz-rotation:45deg;
+            -o-rotation:45deg;
+            -ms-rotation:45deg;
+            rotation:45deg;
+            transform:rotate(45deg);
+        }
+        ::selection{
+            color:#90c;
+            background-color: #cf0;
+        }
+        ::-moz-selection{
+            color:#90c;
+            background-color: #cf0;
+        }
+        body{
+            background-color: #999;
+        }
+        h2{
+            text-shadow: 2px 2px rgba(255,255,255,0.6);
+        }
+        #column{
+            -webkit-column-gap: 3em;
+            -webkit-column-width: 11em;
+            -webkit-column-rule: 1px solid #ccc;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+<h2>Hello World!你好世界！</h2>
+<h2>Hello World!你好世界！</h2>
+<h2>Hello World!你好世界！</h2>
+<div class="test">这是一个旋转过后的div</div>
+<div class="test">这是一个旋转过后的div这是一个旋转过后的div这是一个旋转过后的div这是一个旋转过后的div这是一个旋转过后的div</div>
+<div id="column">
+    <h2>Hello World!你好世界！</h2>
+    <p>这是一个旋转过后的div这是一个旋转过后的div这是一个旋转过后的div这是一个旋转过后的div这是一个旋转过后的div</p>
+    <h2>Hello World!你好世界！</h2>
+    <p>这是一个旋转过后的div这是一个旋转过后的div这是一个旋转过后的div这是一个旋转过后的div这是一个旋转过后的div</p>
+    <h2>Hello World!你好世界！</h2>
+    <p>这是一个旋转过后的div这是一个旋转过后的div这是一个旋转过后的div这是一个旋转过后的div这是一个旋转过后的div</p>
+    <h2>Hello World!你好世界！</h2>
+    <p>这是一个旋转过后的div这是一个旋转过后的div这是一个旋转过后的div这是一个旋转过后的div这是一个旋转过后的div</p>
+</div>
+</body>
+</html>

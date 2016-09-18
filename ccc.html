@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var x = new Object();
+        x.id = 1;
+        x.name = "zhang3";
+        x.age = 23;
+
+        var y = {
+            id:12345,
+            price:34.56,
+            addr:'沈阳市远东大厦5楼',
+            getPrice:function(){
+                return this.price;
+            }
+        };
+
+        console.log(y.getPrice());
+
+        printProperty(x);
+        printProperty(y);
+
+        function printProperty(obj)
+        {
+            for(var qqq in obj)
+            {
+                console.log(qqq+"<<<"+obj[qqq]);
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
